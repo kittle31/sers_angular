@@ -1,0 +1,20 @@
+<div>
+    <ul id="menuList">
+        <li><a href="" ng-click="main()">Return</a></li>
+        <li><a href="" ng-click="newRole()">New Security Role</a></li>
+    </ul>
+    <p style="clear:both;margin-bottom:0px">&nbsp;</p>
+    <br>
+    <table id="browserTable">
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Name</th>
+        </tr>
+        <tr ng-repeat="item in roles">
+            <td><a href="" ng-click="editRole(item)">Edit</a></td>
+            <td><a href="" ng-click="deleteRole(item)">Del</a></td>
+            <td>{{item.name}}</td>
+        </tr>
+    </table>
+</div>

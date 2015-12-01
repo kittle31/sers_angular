@@ -1,0 +1,7 @@
+  <div ng-if="!data.user.auth">
+    <div ng-include src="'login.html'"></div>
+  </div>
+  <div ng-if="data.user.auth">
+    <div ng-include src="'panel.html'"></div>
+  </div>
+

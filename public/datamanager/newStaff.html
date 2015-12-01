@@ -1,0 +1,56 @@
+<div>
+  <table id="operationTable">
+      <tr>
+          <td class="fieldName"><span style="color:red"> * </span>First Name</td>
+          <td><input size="20" maxlength="20" type="text" ng-model="selectedStaff.firstName"></td>
+      </tr>
+      <tr>
+          <td class="fieldName"><span style="color:red"> * </span>Last Name</td>
+          <td><input size="20" maxlength="20" type="text" ng-model="selectedStaff.lastName"></td>
+      </tr>
+      <tr>
+          <td class="fieldName">Title</td>
+          <td><input size="20" maxlength="20" type="text" ng-model="selectedStaff.title"></td>
+      </tr>
+      <tr>
+          <td class="fieldName"><span style="color:red"> * </span>Username</td>
+          <td><input size="10" maxlength="10" type="text" ng-model="selectedStaff.login"></td>
+      </tr>
+      <tr>
+          <td class="fieldName"><span style="color:red"> * </span>Password</td>
+          <td><input size="20" type="password" ng-value="selectedStaff.password"></td>
+      </tr>
+      <tr>
+          <td class="fieldName"><span style="color:red"> * </span>Repeat Password</td>
+          <td><input size="20" type="password" ng-value="selectedStaff.repeatPassword"></td>
+      </tr>
+      <tr>
+          <td class="fieldName">Start Date</td>
+          <td><input size="20" type="text" ng-value="selectedStaff.startDate"></td>
+      </tr>
+      <tr>
+          <td class="fieldName">Active</td>
+          <td><input type="checkbox" ng-value="selectedStaff.active"></td>
+      </tr>
+      <tr>
+        <td class="fieldName">Roles</td>
+          <td>
+              <table id="roleEditor">
+                <tr><th>Role Name</th><th></th></tr>
+                <tr><td colspan="2">No roles defined</td></tr>
+                <tr class="editor">
+                    <td><select><option value="1">Administrator</option><option value="2">Counselor</option><option value="3">User</option><option value="4">Secretary</option><option value="5">House Mom</option><option value="6">Director</option></select></td>
+                    <td><input value="Add Role" type="submit"></td>
+                </tr>
+              </table>
+          </td>
+      </tr>
+      <tr>
+          <td></td>
+          <td style="text-align:right;">
+              <input value="Save" type="submit" ng-click="saveStaff()"/>
+              <input value="Cancel" type="submit" ng-click="personel()"/>
+          </td>
+      </tr>
+  </table>
+</div>

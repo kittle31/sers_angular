@@ -1,0 +1,14 @@
+{
+  "name"         : "SERS",
+  "version"      : "0.0.1",
+  "description"  : "safe electronic records system",
+  "main"         : "server.js",
+  "author"       : "Jon",
+  "dependencies" : {
+    "mongoose"   : "~3.6.2",
+    "morgan"   : "~1.2.2",
+    "body-parser": "~1.5.2",
+    "method-override": "~2.1.2",
+    "express" : "4.8.5"
+   }
+}

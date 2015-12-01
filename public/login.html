@@ -1,0 +1,20 @@
+<div ng-controller="LoginController">
+  <div ng-include="'header.html'"></div>
+  <table style="margin-left: auto;margin-right: auto;border:solid 2px">
+  <tr><th colspan="2">Please login</th></tr>
+  <tr>
+    <td>Username</td>
+    <td><input name="1" value="" type="text" class="text"></td>
+   </tr>
+    <tr>
+      <td>Password</td>
+      <td><input name="2" value="" type="password" class="password"></td></tr>
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Login" ng-click="doLogin()"/>
+      </td>
+    </tr>
+  </table>
+
+</div>
+

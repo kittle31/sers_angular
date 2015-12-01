@@ -1,0 +1,82 @@
+<ul id="menuList">
+    <li><a href="/#/home">Return</a></li>
+    <li><a href="" ng-click="newResident()">New Resident</a></li>
+    <li><a href="" ng-click="editResident()">Edit Resident</a></li>
+    <li><a href="" ng-click="counselNotes()">Counsel Notes</a></li>
+    <li><a href="" ng-click="schedule()">Schedlue</a></li>
+    <li><a href="" ng-click="accountability()">Accountability</a></li>
+</ul>
+
+<p style="clear:both;margin-bottom:0px">&nbsp;</p>
+<table style="width:100%">
+    <tr>
+        <td style="width:25%">
+            <table>
+                <tr>
+                    <td>
+                        <div ng-repeat="l in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'">
+                            <input type="submit" style="width:30px" value="{{l}}" ng-click="letterSearch(l)"/>
+                        </div>
+                    </td>
+                    <td>
+                        <table style="width:100%; border:1px solid;border-collapse:collapse;">
+                            <tr><td colspan="2"><strong>Search</strong></td></tr>
+                            <tr><td colspan="2"><input size="30" name="34" type="text" class="text"></td></tr>
+                            <tr><td><input name="35" checked="checked" value="36" type="radio" class="radio">Last Name</td><td><input name="35" value="37" type="radio" class="radio">First name</td></tr>
+                            <tr><td colspan="2"><input name="38" type="checkbox" class="checkbox">Include Inactive Residents<input name="39" type="hidden" class="hidden"></td></tr>
+                            <tr><th colspan="2"><input name="40" value="Search" type="submit" class="submit"><input name="41" value="Clear" type="submit" class="submit"></th></tr>
+                        </table>
+                        <table style="width:100%; border:1px solid;border-collapse:collapse;">
+                            <tr><td><strong>Resident List</strong></td></tr>
+                            <tr ng-repeat="item in residents">
+                                <td ng-if="item==selectedResident"><strong>* {{item.firstName}} {{item.lastName}} *</strong></td>
+                                <td ng-if="item!=selectedResident"><a href="" ng-click="selectResident(item)">{{item.firstName}} {{item.lastName}}</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td>Last Name<br> <input size="20" ng-value="selectedResident.lastName" readonly/></td>
+                    <td>First Name<br><input size="20" ng-value="selectedResident.firstName" readonly/></td>
+                    <td>ID No<br>     <input size="3"  ng-value="selectedResident.id" readonly/></td>
+                </tr>
+                <tr>
+                    <td>Referred By<br>  <input size="30" ng-value="selectedResident.referredBy" readonly/></td>
+                    <td>Refered Phone<br><input ng-value="formatPhone(selectedResident.referredPhone)"/></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Status<br>    <input type="text" ng-value="selectedResident.phaseStatus" readonly/></td>
+                    <td>Start Date<br><input type="text" ng-value="selectedResident.startDate" readonly/></td>
+                    <td>Exit Date<br> <input type="text" ng-value="selectedResident.exitDate" readonly/></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td></tr>
+                <tr>
+                    <td>Home Phone<br>   <input type="text" ng-value="formatPhone(selectedResident.homePhone)" readonly/></td>
+                    <td>Cell Phone<br>   <input type="text" ng-value="formatPhone(selectedResident.cellPhone)" readonly/></td>
+                    <td>Message Phone<br><input type="text" ng-value="formatPhone(selectedResident.messagePhone)"readonly/></td>
+                </tr>
+                <tr>
+                    <td>Emergency Contact<br><input size="30" ng-value="selectedResident.emContactName" readonly/></td>
+                    <td>Emergency Phone<br>  <input type="text" ng-value="formatPhone(selectedResident.emContactPhone)" readonly/></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>DOB<br><input type="text" ng-value="selectedResident.birthdate" readonly></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Allergy<br><input size="35" ng-value="selectedResident.allergy" readonly/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

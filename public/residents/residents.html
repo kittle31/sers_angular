@@ -1,0 +1,8 @@
+<div>
+  <div ng-include="'header.html'"></div>
+  <p style="clear:both;margin-bottom:0px">&nbsp;</p>
+  <div ng-if="mode=='main'"><div ng-include="'/residents/main.html'"></div></div>
+  <div ng-if="mode=='new'"><div ng-include="'/residents/new.html'"></div></div>
+  <div ng-if="mode=='edit'"><div ng-include="'/residents/new.html'"></div></div>
+</div>
+

@@ -1,0 +1,20 @@
+<div ng-controller="HomeController">
+  <div layout="column" layout-fill>
+    <md-toolbar>
+       <div ng-include="'header.html'">
+       </div>
+    </md-toolbar>
+    <md-content>
+      <ul id="menuList">
+        <li><a href="/myschedule">My Schedule</a></li>
+        <li><a href="/accountability">Accountability</a></li>
+        <li><a href="/#/residents">Residents</a></li>
+        <li><a href="/#/dataManager">Data manager</a></li>
+        <li><a href="/programSchedule">Program Schedule</a></li>
+      </ul>
+      <p style="clear:both;margin-bottom:0px">&nbsp;</p>
+      <p>{{getGreeting()}}, Welcome to Safe Family Ministries</p>
+
+    </md-content>
+  </div>
+</div>

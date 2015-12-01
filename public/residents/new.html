@@ -1,0 +1,94 @@
+<div>
+  <br>
+  <table id="operationTable">
+      <tr>
+          <td class="fieldName"><span style="color:red"> * </span>First Name</td>
+          <td><input size="20" type="text" ng-model="selectedResident.firstName"></td>
+      </tr>
+      <tr>
+          <td class="fieldName"><span style="color:red"> * </span>Last Name</td>
+          <td><input size="20" type="text" ng-model="selectedResident.lastName"></td>
+      </tr>
+      <tr>
+          <td class="fieldName">Start Date</td>
+          <td><input size="20" type="text" ng-model="selectedResident.startDate"></td>
+      </tr>
+      <tr>
+          <td class="fieldName">DOB</td>
+          <td><input size="20" type="text" ng-model="selectedResident.birthdate"></td>
+      </tr>
+      <tr>
+          <td class="fieldName">Active</td>
+          <td><input size="20" type="checkbox" ng-model="selectedResident.active"></td>
+      </tr>
+      <tr>
+          <td class="fieldName">SSN</td>
+          <td><input size="9" type="text" ng-model="selectedResident.ssn"></td>
+      </tr>
+      <tr>
+          <td class="fieldName">Address</td>
+          <td>
+              <table>
+                  <tr>
+                      <td>Street</td>
+                      <td><input size="30" type="text" ng-model="selectedResident.address.addressLine1"/></td>
+                      <td>Apt</td>
+                      <td><input size="8" type="text" ng-model="selectedResident.address.apartmentNumber"/></td>
+                  </tr>
+                  <tr>
+                      <td>City</td>
+                      <td><input size="10" type="text" ng-model="selectedResident.address.city">&nbsp;&nbsp;&nbsp;State <input size="3" maxlength="2" type="text" ng-model="selectedResident.address.st"/></td>
+                      <td>Zip</td>
+                      <td><input size="8" type="text" ng-model="selectedResident.address.zipCode"></td>
+                  </tr>
+              </table>
+          </td>
+      </tr>
+  </table>
+      <div layout="column" layout-padding>
+        <div layout="row">
+          <div class="fieldName" flex="10">Address</div>
+          <input type="text" ng-model="selectedResident.address"/>
+        </div>
+        <div layout="row">
+          <div class="fieldName" flex="10">Status</div>
+          <input type="text" ng-model="selectedResident.status"/>
+        </div>
+        <div layout="row">
+          <div class="fieldName" flex="10">Home Phone</div>
+          (&nbsp;<input type="text" size="3" ng-model="selectedResident.homePhone.ac"/>&nbsp; ) &nbsp;<input type="text"  size="3" ng-model="selectedResident.homePhone.prefix"/>&nbsp; <input type="text" size="3" ng-model="selectedResident.homePhone.suffix"/>
+        </div>
+        <div layout="row">
+          <div class="fieldName" flex="10">Cell Phone</div>
+          (&nbsp;<input type="text" size="3" ng-model="selectedResident.cellPhone.ac"/>&nbsp; ) &nbsp;<input type="text"  size="3" ng-model="selectedResident.cellPhone.prefix"/>&nbsp; <input type="text" size="3" ng-model="selectedResident.cellPhone.suffix"/>
+        </div>
+        <div layout="row">
+          <div class="fieldName" flex="10">Message Phone</div>
+          (&nbsp;<input type="text" size="3" ng-model="selectedResident.messagePhone.ac"/>&nbsp; ) &nbsp;<input type="text"  size="3" ng-model="selectedResident.messagePhone.prefix"/>&nbsp; <input type="text" size="3" ng-model="selectedResident.messagePhone.suffix"/>
+        </div>
+        <div layout="row">
+          <div class="fieldName" flex="10">Allergy</div>
+          <input type="text" ng-model="selectedResident.allergy"/>
+        </div>
+        <div layout="row">
+          <div class="fieldName" flex="10">Emergency Contact</div>
+          <input type="text" ng-model="selectedResident.emergencyContact"/>
+        </div>
+        <div layout="row">
+          <div class="fieldName" flex="10">Home Phone</div>
+          (&nbsp;<input type="text" size="3" ng-model="selectedResident.emergencyPhone.ac"/>&nbsp; ) &nbsp;<input type="text"  size="3" ng-model="selectedResident.emergencyPhone.prefix"/>&nbsp; <input type="text" size="3" ng-model="selectedResident.emergencyPhone.suffix"/>
+        </div>
+        <div layout="row">
+          <div class="fieldName" flex="10">Referred By</div>
+          <input type="text" ng-model="selectedResident.referredBy"/>
+        </div>
+        <div layout="row">
+          <div class="fieldName" flex="10">Referred Phone</div>
+          (&nbsp;<input type="text" size="3" ng-model="selectedResident.referredPhone.ac"/>&nbsp; ) &nbsp;<input type="text"  size="3" ng-model="selectedResident.referredPhone.prefix"/>&nbsp; <input type="text" size="3" ng-model="selectedResident.referredPhone.suffix"/>
+        </div>
+      </div>
+      <input type="submit" ng-click="saveResident()" value="Save"/>
+      <input type="submit" ng-click="cancelResident()" value="Cancel"/>
+
+</div>
+

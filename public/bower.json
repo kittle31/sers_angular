@@ -1,10 +1,10 @@
 {
-  "name": "Builder Game",
+  "name": "SERS UI",
   "version": "1.0.0",
   "authors": [
     "Jon <kittle31@gmail.com>"
   ],
-  "description": "Builder web UI",
+  "description": "SERS web UI",
   "main": "",
   "moduleType": [
     "node"
@@ -19,13 +19,14 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.28",
+    "angular": "~1.3.16",
     "angular-route": "~1.3.0",
     "angular-cookies": "~1.2.28",
-    "angular-material": "~0.7.1"
+    "angular-material": "0.10.1-rc4"
   },
   "resolutions": {
-    "angular": "1.3.20",
+    "angular": "1.3.x",
     "angular-material": "master"
   }
 }
+

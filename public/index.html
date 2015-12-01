@@ -1,0 +1,230 @@
+<!-- index.html -->
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="SersApp">
+<head>
+
+    <!-- META -->
+    <meta charset="utf-8">
+    <title>SERS</title>
+
+    <!-- CSS -->
+
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/loginController.js"></script>
+    <script src="js/homeController.js"></script>
+    <script src="js/residentController.js"></script>
+    <script src="js/dataController.js"></script>
+    <style>
+.fieldName {
+font-weight: bold;
+text-align:right;
+padding:3px;
+}
+
+
+body { font-family: sans-serif}
+td {    vertical-align: top; }
+
+.errorMessage {
+background-color: #ffb0b0;
+border: 1px solid #ee0000;
+padding: 5px;
+margin-bottom: 10px;
+}
+.infoMessage {
+background-color: #fbffcc;
+border: 1px solid #eda33a;
+padding: 5px;
+margin-bottom: 10px;
+}
+#title { font-size: 18pt; font-weight: bold }
+#subtitle { font-size: 9pt; font-style: italic }
+#headerBanner {
+background-color: #C7A747;
+border:3px solid #E3D3A3;
+padding:5px;
+width:100%;
+
+}
+#headerBanner a {
+color: Black;
+}
+#headerBanner a:hover,a:active {
+color: Red;
+}
+#headerBanner td.operationName
+{
+font-family:Arial, Helvetica, sans-serif;
+font-size: 25px;
+font-weight: bold;
+color:#FFFFFF;
+}
+
+#browserTable {
+font-size: 13px;
+border-collapse:collapse;
+background-color: #EEEEEE;
+}
+#browserTable td {
+border:1px solid #DDDDDD;
+padding:3px;
+}
+#browserTable td.overdue {
+border:1px solid #DDDDDD;
+padding:3px;
+background-color: #F58F8F;
+}
+#browserTable td.due {
+border:1px solid #DDDDDD;
+padding:3px;
+background-color: #59A600;
+}
+#browserTable th {
+text-align:left;
+color: #FFFFFF;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#888888;
+border:1px solid #DDDDDD;
+}
+#browserTable a:link,a:visited {
+display:block;
+color: #000000;
+text-align:center;
+}
+#browserTable a:hover,a:active {
+color: Red;
+}
+#menuList ul {
+margin:0;
+padding:0;
+overflow-hidden;
+}
+#menuList li {
+list-style-type:none;
+float:left;
+margin:0;
+padding:0;
+}
+#menuList a:link,a:visited {
+display:block;
+color:#000000;
+background-color:#EEEEBB;
+text-align:center;
+padding:6px;
+text-decoration:none;
+border:1px solid;
+}
+#menuList a:hover,a:active {
+background-color: #BEBE96;
+}
+#roleEditor {
+border:1px solid DimGrey;
+border-collapse:collapse;
+}
+#roleEditor td {
+padding:5px;
+}
+#roleEditor tr.editor {
+border:2px solid DimGrey;
+}
+#calenderTable {
+border:2px solid;
+border-collapse:collapse;
+}
+#calenderTable th {
+width:120px;
+border:2px solid;
+}
+#calenderTable th.today {
+border:2px solid;
+background-color:#F6F6DD;
+width:150px;
+}
+#calenderTable td {
+font-size: 13px;
+padding:2px;
+border:1px solid;
+}
+#calenderTable td.today {
+font-size: 13px;
+padding:2px;
+background-color:#F6F6DD;
+}
+#calenderTable td.appointment {
+font-size: 13px;
+padding:2px;
+border:2px solid;
+background-color:#EEEEBB;
+}
+#calenderTable td.global {
+font-size: 13px;
+padding:2px;
+border:2px solid;
+background-color:#D6E6A8;
+overflow:hidden;
+}
+#calenderTable td.conflict {
+font-size: 13px;
+border:2px solid;
+padding:0px;
+background-color: #FA7B6E
+overflow:hidden;
+}
+#calenderTable a:link,a:visited {
+display:block;
+width:120px;
+color:#000000;
+text-align:left;
+padding:2px;
+text-decoration:none;
+}
+#calenderTable a:hover,a:active {
+background-color: #BEBE96;
+}
+#operationTable {
+font-size: 15px;
+background-color: #EEEEEE;
+}
+#operationTable td {
+padding: 1px;
+}
+#operationTable td.fieldName {
+font-weight: bold;
+text-align:right;
+}
+#accTable {
+font-size: 13px;
+border-collapse:collapse;
+background-color: #EEEEEE;
+}
+#accTable td {
+padding:0px;
+margin:0px;
+border:1px solid Black;
+}
+#accTable th {
+text-align:left;
+color: #FFFFFF;
+padding-top:5px;
+padding-bottom:5px;
+background-color:#888888;
+border:1px solid Black;
+width:65px
+}
+#accTable td.totals {
+font-size: 17px;
+}
+    </style>
+</head>
+<body ng-controller="SersController">
+<div ng-view></div>
+</body>
+</html>

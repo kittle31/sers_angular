@@ -1,0 +1,8 @@
+<div>
+    <div ng-include="'header.html'"></div>
+    <div ng-if="mode=='main'" ng-include="'/datamanager/main.html'"></div>
+    <div ng-if="mode=='staffMain'" ng-include="'/datamanager/staffMain.html'"></div>
+    <div ng-if="mode=='newStaff'" ng-include="'/datamanager/newStaff.html'"></div>
+
+    <div ng-if="mode=='roleMain'" ng-include="'/datamanager/securityRoleMain.html'"></div>
+</div>
